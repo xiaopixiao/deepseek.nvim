@@ -14,7 +14,7 @@ DeepSeek CLI integration for Neovim. Launches the [DeepSeek-TUI](https://github.
 
 - Neovim >= 0.10
 - [Snacks.nvim](https://github.com/folke/snacks.nvim)
-- [DeepSeek CLI](https://github.com/Hmbown/DeepSeek-TUI) (`deepseek` on `$PATH`)
+- [DeepSeek-TUI](https://github.com/Hmbown/DeepSeek-TUI) (`deepseek` on `$PATH`)
 
 ## Installation
 
@@ -91,8 +91,6 @@ These are active inside the DeepSeek terminal window:
 | `<S-CR>` | New line (Shift+Enter) |
 
 Keys are forwarded via `nvim_chan_send` to the PTY, bypassing Neovim's key-mapping layer -- no recursion, no input freeze.
-
-This project is created by DeepSeek-v4-Pro.
 
 ## License
 
