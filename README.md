@@ -2,6 +2,10 @@
 
 DeepSeek CLI integration for Neovim. Launches the [DeepSeek-TUI](https://github.com/Hmbown/DeepSeek-TUI) in a [Snacks.nvim](https://github.com/folke/snacks.nvim) terminal window, with seamless toggle, focus, and DeepSeek-native keyboard shortcuts pass-through.
 
+> **⚠️ Compatibility Notice**
+>
+> This plugin currently supports only the legacy `deepseek-tui`. The upstream project has been renamed to [codewhale](https://github.com/Hmbown/codewhale), and this plugin has **not yet been adapted** to the new name. Support for codewhale will be added when time permits.
+
 ## Features
 
 - **Toggle terminal** — show/hide the DeepSeek CLI in a right-side split

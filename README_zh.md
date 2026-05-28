@@ -2,6 +2,10 @@
 
 DeepSeek CLI 的 Neovim 集成。在 [Snacks.nvim](https://github.com/folke/snacks.nvim) 终端窗口中启动 [DeepSeek-TUI](https://github.com/Hmbown/DeepSeek-TUI)，支持无缝切换、聚焦以及 DeepSeek 原生快捷键透传。
 
+> **⚠️ 兼容性说明**
+>
+> 本插件目前仅支持旧版 `deepseek-tui`。上游项目已更名为 [codewhale](https://github.com/Hmbown/codewhale)，本插件**尚未适配**新名称。后续有时间再进行适配。
+
 ## 特性
 
 - **终端切换** — 在右侧分屏中显示/隐藏 DeepSeek CLI
