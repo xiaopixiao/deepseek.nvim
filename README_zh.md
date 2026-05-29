@@ -1,24 +1,24 @@
 # deepseek.nvim
 
-DeepSeek CLI 的 Neovim 集成。在 [Snacks.nvim](https://github.com/folke/snacks.nvim) 终端窗口中启动 [DeepSeek-TUI](https://github.com/Hmbown/DeepSeek-TUI)，支持无缝切换、聚焦以及 DeepSeek 原生快捷键透传。
+[codewhale](https://github.com/Hmbown/codewhale) CLI 的 Neovim 集成。在 [Snacks.nvim](https://github.com/folke/snacks.nvim) 终端窗口中启动 [codewhale](https://github.com/Hmbown/codewhale)，支持无缝切换、聚焦以及 codewhale 原生快捷键透传。
 
 > **⚠️ 兼容性说明**
 >
-> 本插件目前仅支持旧版 `deepseek-tui`。上游项目已更名为 [codewhale](https://github.com/Hmbown/codewhale)，本插件**尚未适配**新名称。后续有时间再进行适配。
+> 本插件已适配 **codewhale**（原名 `deepseek-tui`）。旧版 `deepseek` 二进制不再是默认命令——插件现在默认启动 `codewhale`。
 
 ## 特性
 
-- **终端切换** — 在右侧分屏中显示/隐藏 DeepSeek CLI
+- **终端切换** — 在右侧分屏中显示/隐藏 codewhale CLI
 - **智能聚焦** — 未聚焦时跳转到终端，已聚焦时隐藏终端
 - **会话恢复** — 通过 `:DeepSeekResume` 继续上次的对话
 - **交互模式** — `:DeepSeekRun` 启动交互式 TUI 流程
-- **快捷键透传** — `<C-t>`（对话日志）、`<C-p>`（模糊文件）、`<C-r>`（恢复会话）通过 PTY 通道写入转发给 DeepSeek TUI，避免键映射递归
+- **快捷键透传** — `<C-t>`（对话日志）、`<C-p>`（模糊文件）、`<C-r>`（恢复会话）通过 PTY 通道写入转发给 codewhale，避免键映射递归
 
 ## 依赖
 
 - Neovim >= 0.10
 - [Snacks.nvim](https://github.com/folke/snacks.nvim)
-- [DeepSeek-TUI](https://github.com/Hmbown/DeepSeek-TUI)（`deepseek` 需在 `$PATH` 中）
+- [codewhale](https://github.com/Hmbown/codewhale)（`codewhale` 需在 `$PATH` 中）
 
 ## 安装
 
@@ -69,7 +69,7 @@ DeepSeek CLI 的 Neovim 集成。在 [Snacks.nvim](https://github.com/folke/snac
 | `terminal.split_width_percentage` | `number` | `0.30` | 宽度比例 (0-1) |
 | `terminal.auto_close` | `boolean` | `true` | 退出时自动关闭终端 buffer |
 | `terminal.snacks_win_opts` | `table` | `{}` | 合并到 Snacks 终端 `win` 配置中 |
-| `terminal_cmd` | `string?` | `nil` | 覆盖可执行文件路径（默认: `deepseek`） |
+| `terminal_cmd` | `string?` | `nil` | 覆盖可执行文件路径（默认: `codewhale`） |
 | `env` | `table<string,string>?` | `nil` | 额外的环境变量 |
 
 ## 命令
@@ -85,7 +85,7 @@ DeepSeek CLI 的 Neovim 集成。在 [Snacks.nvim](https://github.com/folke/snac
 
 ## 终端快捷键
 
-以下快捷键在 DeepSeek 终端窗口中生效：
+以下快捷键在 codewhale 终端窗口中生效：
 
 | 按键 | 操作 |
 |-----|--------|

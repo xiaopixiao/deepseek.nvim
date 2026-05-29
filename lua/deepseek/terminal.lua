@@ -167,7 +167,7 @@ end
 ---@param cmd_args string?
 ---@return string, table
 local function get_command_and_env(cmd_args)
-  local base_cmd = defaults.terminal_cmd or "deepseek"
+  local base_cmd = defaults.terminal_cmd or "codewhale"
   local cmd_string
   if cmd_args and cmd_args ~= "" then
     cmd_string = base_cmd .. " " .. cmd_args

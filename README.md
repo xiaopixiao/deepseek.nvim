@@ -1,24 +1,24 @@
 # deepseek.nvim
 
-DeepSeek CLI integration for Neovim. Launches the [DeepSeek-TUI](https://github.com/Hmbown/DeepSeek-TUI) in a [Snacks.nvim](https://github.com/folke/snacks.nvim) terminal window, with seamless toggle, focus, and DeepSeek-native keyboard shortcuts pass-through.
+[codewhale](https://github.com/Hmbown/codewhale) CLI integration for Neovim. Launches [codewhale](https://github.com/Hmbown/codewhale) in a [Snacks.nvim](https://github.com/folke/snacks.nvim) terminal window, with seamless toggle, focus, and codewhale-native keyboard shortcuts pass-through.
 
 > **⚠️ Compatibility Notice**
 >
-> This plugin currently supports only the legacy `deepseek-tui`. The upstream project has been renamed to [codewhale](https://github.com/Hmbown/codewhale), and this plugin has **not yet been adapted** to the new name. Support for codewhale will be added when time permits.
+> This plugin has been adapted for **codewhale** (formerly `deepseek-tui`). The legacy `deepseek` binary is no longer the default — the plugin now launches `codewhale` by default.
 
 ## Features
 
-- **Toggle terminal** — show/hide the DeepSeek CLI in a right-side split
+- **Toggle terminal** — show/hide the codewhale CLI in a right-side split
 - **Focus toggle** — jump to the terminal if unfocused, hide it if already focused
 - **Session resume** — `:DeepSeekResume` to pick up where you left off
 - **Interactive run** — `:DeepSeekRun` for the interactive TUI flow
-- **Pass-through shortcuts** — `<C-t>` (conversation log), `<C-p>` (fuzzy files), `<C-r>` (resume session) are forwarded to DeepSeek TUI via PTY channel writes, avoiding key-mapping recursion
+- **Pass-through shortcuts** — `<C-t>` (conversation log), `<C-p>` (fuzzy files), `<C-r>` (resume session) are forwarded to codewhale via PTY channel writes, avoiding key-mapping recursion
 
 ## Requirements
 
 - Neovim >= 0.10
 - [Snacks.nvim](https://github.com/folke/snacks.nvim)
-- [DeepSeek-TUI](https://github.com/Hmbown/DeepSeek-TUI) (`deepseek` on `$PATH`)
+- [codewhale](https://github.com/Hmbown/codewhale) (`codewhale` on `$PATH`)
 
 ## Installation
 
@@ -69,7 +69,7 @@ DeepSeek CLI integration for Neovim. Launches the [DeepSeek-TUI](https://github.
 | `terminal.split_width_percentage` | `number` | `0.30` | Width ratio (0-1) |
 | `terminal.auto_close` | `boolean` | `true` | Auto-close terminal buffer on exit |
 | `terminal.snacks_win_opts` | `table` | `{}` | Merged into Snacks terminal `win` config |
-| `terminal_cmd` | `string?` | `nil` | Override the binary (default: `deepseek`) |
+| `terminal_cmd` | `string?` | `nil` | Override the binary (default: `codewhale`) |
 | `env` | `table<string,string>?` | `nil` | Extra environment variables |
 
 ## Commands
@@ -85,7 +85,7 @@ DeepSeek CLI integration for Neovim. Launches the [DeepSeek-TUI](https://github.
 
 ## Terminal Key Bindings
 
-These are active inside the DeepSeek terminal window:
+These are active inside the codewhale terminal window:
 
 | Key | Action |
 |-----|--------|
@@ -94,7 +94,7 @@ These are active inside the DeepSeek terminal window:
 | `<C-r>` | Open resume session picker |
 | `<S-CR>` | New line (Shift+Enter) |
 
-Keys are forwarded via `nvim_chan_send` to the PTY, bypassing Neovim's key-mapping layer -- no recursion, no input freeze.
+Keys are forwarded via `nvim_chan_send` to the PTY, bypassing Neovim's key-mapping layer — no recursion, no input freeze.
 
 ## License
 
