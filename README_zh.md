@@ -1,4 +1,4 @@
-# deepseek.nvim
+# codewhale.nvim
 
 [codewhale](https://github.com/Hmbown/codewhale) CLI 的 Neovim 集成。在 [Snacks.nvim](https://github.com/folke/snacks.nvim) 终端窗口中启动 [codewhale](https://github.com/Hmbown/codewhale)，支持无缝切换、聚焦以及 codewhale 原生快捷键透传。
 
@@ -26,7 +26,7 @@
 
 ```lua
 {
-  "xiaopixiao/deepseek.nvim",
+  "xiaopixiao/codewhale.nvim",
   dependencies = { "folke/snacks.nvim" },
   config = true,
   keys = {
@@ -42,7 +42,7 @@
 
 ```lua
 {
-  "xiaopixiao/deepseek.nvim",
+  "xiaopixiao/codewhale.nvim",
   dependencies = { "folke/snacks.nvim" },
   opts = {
     terminal = {
